@@ -1,10 +1,10 @@
 {
-  "name": "basic",
+  "name": "staff-directory",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build --mode client && vite build",
-    "preview": "wrangler pages dev ./dist",
+    "preview": "wrangler pages dev ./dist --compatibility-date=2024-03-13",
     "deploy": "npm run build && wrangler pages deploy ./dist"
   },
   "private": true,

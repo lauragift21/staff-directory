@@ -1,4 +1,4 @@
-# Staff Hub - An Employee Resource Hub built with HonoX, Cloudflare Pages, and D1 
+# Staff Directory - An Employee Resource Hub built with HonoX, Cloudflare Pages, and D1 
 
 ### Features
 
