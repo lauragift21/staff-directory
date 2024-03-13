@@ -6,8 +6,8 @@ import { findAllEmployees, findAllDepartments, findAllLocations } from '../db'
 const EmployeeCard: FC<{ employee: Employee }> = ({ employee }) => {
   const { name, image_url, department_name, location_name } = employee;
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
+    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md">
+      <a href="/">
         <img className="rounded-t-lg" src={image_url} alt={name} />
         <div className="p-4">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{name}</h5>
@@ -40,7 +40,7 @@ export const GET = createRoute(async (c) => {
           {locations.length} <span className="px-1 text-sm">Locations</span>
         </button>
       </section>
-      <section className="flex flex-wrap gap-4 -mx-2">
+      <section className="flex flex-wrap -mx-4">
         {employees.map((employee) => (
           <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4">
             <EmployeeCard employee={employee} />

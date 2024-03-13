@@ -14,6 +14,8 @@ export const POST = createRoute(async (c) => {
   try {
     const formData = await c.req.json();
     console.log('Received form data:', formData);
+    // store and retrieve the image in R2 and then store the generated URL
+    const image = formData.image_url;
     await createEmployee(c.env.DB, formData);
 
     return c.redirect('/', 303);

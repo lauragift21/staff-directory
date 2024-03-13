@@ -6,9 +6,12 @@ const EmployeeForm: FC = ({ locations, departments}) => {
   const [employee, setEmployee] = useState<Partial<Employee>>({});
 
   const handleChange = (e: Event) => {
-    const target = e.target as HTMLTextAreaElement
-    setEmployee({ ...employee, [target.name]: target.value });
+    const target = e.target as HTMLInputElement
+    const file = target.files && target.files[0] ? target.files[0].name : target.value
+    console.log(file)
+    setEmployee({ ...employee, [target.name]: file });
   };
+
 
   const handleSubmit = async (e: Event) => {
     e.preventDefault();
