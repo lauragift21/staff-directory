@@ -11,7 +11,7 @@ export default jsxRenderer(({ children, title }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {import.meta.env.PROD ? (
           <>
-          <link href="/static/style.css" rel="stylesheet" />
+          <link href='static/assets/style.css' rel='stylesheet' />
           <script type='module' src='/static/client.js'></script>
           </>
         ) : (
