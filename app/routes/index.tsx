@@ -7,14 +7,13 @@ const EmployeeCard: FC<{ employee: Employee }> = ({ employee }) => {
   const { name, image_url, department_name, location_name } = employee;
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md">
-      <a href="/">
-        <img className="rounded-t-lg" src={image_url} alt={name} />
-        <div className="p-4">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{name}</h5>
-          <p className="font-normal text-gray-700">{department_name}</p>
-          <p className="font-normal text-gray-700">{location_name}</p>
-        </div>
-      </a>
+      <img className="bg-indigo-600 p-4 rounded-t-lg" src={image_url} alt={name} />
+      <div className="p-4">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{name}</h5>
+        <p className="font-normal text-gray-700">{department_name}</p>
+        <p className="font-normal text-gray-700">{location_name}</p>
+      </div>
+
     </div>
   );
 };
