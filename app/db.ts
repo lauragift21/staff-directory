@@ -8,6 +8,7 @@ export type Employee = {
   department_id: number;
   location_name: string;
   department_name: string;
+  image_file?: File;
 };
 
 export const findAllEmployees = async (db: D1Database) => {

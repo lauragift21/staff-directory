@@ -2,7 +2,8 @@
 
 ### Features
 
-- Populate Employee Directory
+- Full list of Employees
+- Dark Theme Mode
 - Total Number of Employees
 - Filters
 - Search Functionality

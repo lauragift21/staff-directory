@@ -2,31 +2,37 @@ import { useState } from 'hono/jsx'
 import type { FC } from 'hono/jsx';
 import type { Employee } from '../db';
 
-const EmployeeForm: FC = ({ locations, departments}) => {
+const EmployeeForm: FC = ({ locations, departments }) => {
   const [employee, setEmployee] = useState<Partial<Employee>>({});
 
   const handleChange = (e: Event) => {
     const target = e.target as HTMLInputElement
-    const file = target.files && target.files[0] ? target.files[0].name : target.value
+    const file = target.files && target.files[0] ? target.files[0] : target.value
     console.log(file)
     setEmployee({ ...employee, [target.name]: file });
   };
 
-
   const handleSubmit = async (e: Event) => {
     e.preventDefault();
     console.log('Submitting employee:', employee);
+    const formData = new FormData();
+    Object.entries(employee).forEach(([key, value]) => {
+      if (key !== 'image_file') {
+        formData.append(key, value.toString());
+      }
+    });
+    if (employee.image_file instanceof File) {
+      formData.append('image_file', employee.image_file, (employee.image_file as File).name);
+    }
+
     try {
       const response = await fetch('/employees/create', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(employee),
+        body: formData,
       });
-  
+
       if (!response.ok) throw new Error('Network response was not ok.');
-  
+
       const result = await response.json();
       console.log('Success:', result);
       setEmployee({});
@@ -78,8 +84,8 @@ const EmployeeForm: FC = ({ locations, departments}) => {
         <label htmlFor="image" className="block text-sm font-medium text-gray-700 dark:text-white">Image</label>
         <input
           type="file"
-          name="image_url"
-          id="image_url"
+          name="image_file"
+          id="image_file"
           onChange={handleChange}
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:text-white"
         />

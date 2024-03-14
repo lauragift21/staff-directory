@@ -9,7 +9,8 @@ declare module 'hono' {
   interface Env {
     Variables: {}
     Bindings: {
-      DB: D1Database
+      DB: D1Database,
+      MY_BUCKET: R2Bucket
     }
   }
   interface ContextRenderer {
