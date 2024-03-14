@@ -12,6 +12,7 @@ Staff Directory is an intuitive Employee Resource Hub designed to simplify the w
 ## Demo
 
 *Link to the live demo or screenshots of the app.*
+![demo](./demo.gif)
 
 ## Getting Started
 
