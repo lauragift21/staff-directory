@@ -27,6 +27,7 @@ export const GET = createRoute(async (c) => {
       <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl mt-12">
         <span className="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-sky-400">{`Directory `}</span>
       </h1>
+      <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Find all your colleagues in one place, making work collaboration easier than ever.</p>
       <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400"></p>
       <section className="my-12">
         <button type="button" class="inline-flex items-center font-bolder mr-10 px-10 py-2.5 text-xl font-medium text-center text-gray-500 shadow-lg rounded-lg hover:bg-blue-200 hover:text-blue-400 border border-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:text-white">
