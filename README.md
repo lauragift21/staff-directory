@@ -36,6 +36,22 @@ To get a local copy up and running, follow these simple steps.
    ```sh
    npm run dev
    ```
+4. Copy the wrangler config file
+   ```sh
+   cp wrangler.example.toml wrangler.toml
+   ```
+5. Create a DB with Wrangler and copy config to wrangler.toml
+   ```
+   npx wrangler d1 create <DATABASE_NAME>
+   ``` 
+6. Seed local DB with data
+   ```sh
+   npx wrangler d1 execute <DATABASE_NAME> --local --file=./schema.sql   
+   ```
+7. Create a bucket with Wrangler and copy config to wrangler.toml
+   ```
+   npx wrangler r2 bucket create <NAME>
+   ```
 
 ### Deployment
 
