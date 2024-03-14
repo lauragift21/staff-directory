@@ -23,7 +23,7 @@ export const GET = createRoute(async (c) => {
   const locations = await findAllLocations(c.env.DB)
   const departments = await findAllDepartments(c.env.DB)
   return c.render(
-    <>
+    <section className="h-full">
       <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl mt-12">
         <span className="text-transparent bg-clip-text bg-gradient-to-r to-blue-600 from-sky-400">{`Directory `}</span>
       </h1>
@@ -47,6 +47,6 @@ export const GET = createRoute(async (c) => {
           </div>
         ))}
       </section>
-    </>
+    </section>
   )
 })
