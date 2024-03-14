@@ -4,16 +4,13 @@ import { basicAuth } from 'hono/basic-auth'
 const app = new Hono()
 
 app.use(
-  '/employees/',
+  '/admin',
   basicAuth({
     username: 'admin',
-    password: 'admin',
+    password: 'saycheese',
   })
 )
 
-app.get('/create', (c) => {
-  return c.text('You are authorized')
-})
 
 
 export default app;
