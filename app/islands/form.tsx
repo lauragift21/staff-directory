@@ -27,7 +27,7 @@ const EmployeeForm: FC = ({ locations, departments }) => {
     }
 
     try {
-      const response = await fetch('/employees/create', {
+      const response = await fetch('/admin/create', {
         method: 'POST',
         body: formData,
       });

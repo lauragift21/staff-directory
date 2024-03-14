@@ -1,6 +1,6 @@
 import { createRoute } from 'honox/factory'
-import EmployeeForm from '../islands/form'
-import { findAllDepartments, findAllLocations } from '../db'
+import EmployeeForm from '../../islands/form'
+import { findAllDepartments, findAllLocations } from '../../db'
 
 export default createRoute(async (c) => {
   const locations = await findAllLocations(c.env.DB)
