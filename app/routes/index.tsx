@@ -30,13 +30,13 @@ export const GET = createRoute(async (c) => {
       </h1>
       <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400"></p>
       <section className="my-12">
-        <button type="button" class="inline-flex items-center font-bolder mr-10 px-10 py-2.5 text-xl font-medium text-center text-gray-500 shadow-lg rounded-lg hover:bg-blue-200 hover:text-blue-400 border border-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300">
+        <button type="button" class="inline-flex items-center font-bolder mr-10 px-10 py-2.5 text-xl font-medium text-center text-gray-500 shadow-lg rounded-lg hover:bg-blue-200 hover:text-blue-400 border border-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:text-white">
           {employees.length} <span className="px-1 text-sm">People</span>
         </button>
-        <button type="button" class="inline-flex items-center font-bolder mr-10 px-10 py-2.5 text-xl font-medium text-center text-gray-500 shadow-lg rounded-lg hover:bg-red-200 hover:text-red-400 border border-red-400 focus:ring-4 focus:outline-none focus:ring-red-300">
+        <button type="button" class="inline-flex items-center font-bolder mr-10 px-10 py-2.5 text-xl font-medium text-center text-gray-500 shadow-lg rounded-lg hover:bg-red-200 hover:text-red-400 border border-red-400 focus:ring-4 focus:outline-none focus:ring-red-300 dark:text-white">
           {departments.length} <span className="px-1 text-sm">Departments</span>
         </button>
-        <button type="button" class="inline-flex items-center font-bolder px-10 py-2.5 text-xl font-medium text-center text-gray-500 shadow-lg rounded-lg hover:bg-indigo-200 hover:text-indigo-400 border border-indigo-400 focus:ring-4 focus:outline-none focus:ring-indigo-300">
+        <button type="button" class="inline-flex items-center font-bolder px-10 py-2.5 text-xl font-medium text-center text-gray-500 shadow-lg rounded-lg hover:bg-indigo-200 hover:text-indigo-400 border border-indigo-400 focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:text-white">
           {locations.length} <span className="px-1 text-sm">Locations</span>
         </button>
       </section>

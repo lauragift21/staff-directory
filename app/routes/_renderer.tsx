@@ -24,7 +24,7 @@ export default jsxRenderer(({ children, title }) => {
         <Script src="/app/client.ts" async />
       </head>
       <Nav />
-      <body className="max-w-screen-xl mx-auto p-4">{children}</body>
+      <body className="max-w-screen-xl mx-auto p-4 dark:bg-gray-800">{children}</body>
       <Footer />
     </html>
   )
