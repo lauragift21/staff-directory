@@ -6,8 +6,11 @@ export const Nav = () => {
           <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Staff Hub Logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Staff Directory</span>
         </a>
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        {/* <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <a href="/employees/create" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Add Employee</a>
+        </div> */}
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <a href="https://github.com/lauragift21/staff-directory" class="text-white bg-gray-900 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Fork on GitHub</a>
         </div>
       </div>
     </nav>

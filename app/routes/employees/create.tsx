@@ -41,8 +41,8 @@ export const POST = createRoute(async (c) => {
       join_date: getFormDataValue(formData, 'join_date'),
       department_id: getFormDataNumber(formData, 'department_id'),
       location_id: getFormDataNumber(formData, 'location_id'),
-      location_name: getFormDataValue(formData, 'location_name', ''), // Assuming a default or fetch from DB
-      department_name: getFormDataValue(formData, 'department_name', ''), // Assuming a default or fetch from DB
+      location_name: '',
+      department_name: ''
     };
     
     console.log(employeeData);
@@ -57,3 +57,5 @@ export const POST = createRoute(async (c) => {
     return new Response('Error processing your request', { status: 500 });
   }
 });
+
+
