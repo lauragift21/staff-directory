@@ -4,6 +4,7 @@ import type { Employee } from '../db';
 
 const EmployeeForm: FC = ({ locations, departments }) => {
   const [employee, setEmployee] = useState<Partial<Employee>>({});
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e: Event) => {
     const target = e.target as HTMLInputElement
@@ -13,6 +14,7 @@ const EmployeeForm: FC = ({ locations, departments }) => {
 
   const handleSubmit = async (e: Event) => {
     e.preventDefault();
+    setIsLoading(true);
     console.log('Submitting employee:', employee);
     const formData = new FormData();
     Object.entries(employee).forEach(([key, value]) => {
@@ -37,6 +39,8 @@ const EmployeeForm: FC = ({ locations, departments }) => {
       setEmployee({});
     } catch (error) {
       console.error('Error:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -126,12 +130,12 @@ const EmployeeForm: FC = ({ locations, departments }) => {
           ))}
         </select>
       </div>
-
       <button
         type="submit"
-        className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:text-white"
+        disabled={isLoading}
+        className={`inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${isLoading ? 'bg-indigo-400' : 'bg-indigo-600'}`}
       >
-        Add Employee
+        {isLoading ? 'Submitting...' : 'Add Employee'}
       </button>
     </form>
   );
