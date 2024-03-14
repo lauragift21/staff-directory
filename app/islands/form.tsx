@@ -8,7 +8,6 @@ const EmployeeForm: FC = ({ locations, departments }) => {
   const handleChange = (e: Event) => {
     const target = e.target as HTMLInputElement
     const file = target.files && target.files[0] ? target.files[0] : target.value
-    console.log(file)
     setEmployee({ ...employee, [target.name]: file });
   };
 
