@@ -12,8 +12,8 @@ export const GET = createRoute(async (c) => {
 
   return c.render(
     <>
-      <section className="mt-6 p-14 flex items-center justify-between bg-gradient-to-r from-indigo-500 to-violet-600">
-        <div>
+      <section className="mt-6 p-14 flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-indigo-500 to-violet-600">
+        <div className="text-center md:text-left">
           <h2 className="text-4xl text-white font-bold">{employee.name}</h2>
           <p className="text-white font-semibold text-2xl">{employee.position}</p>
           <div className="flex items-center space-x-2 pt-4">
@@ -30,11 +30,11 @@ export const GET = createRoute(async (c) => {
             <p className="text-white text-xl">Started on {formattedDate}</p>
           </div>
         </div>
-        <div className="">
-          <img src={employee.image_url} alt={`Photo of ${employee.name}`} style={{ maxWidth: '280px' }} />
+        <div className="mt-4 md:mt-0">
+          <img src={employee.image_url} alt={`Photo of ${employee.name}`} className="max-w-xs md:max-w-sm mx-auto" />
         </div>
       </section>
-      <section className="px-14 my-12">
+      <section className="px-14 my-12 font-bold">
         <h2 className="text-3xl pb-4">Department</h2>
         <hr />
         <p className="text-2xl py-4">{employee.department_name}</p>
