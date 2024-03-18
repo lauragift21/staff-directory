@@ -35,9 +35,9 @@ export const GET = createRoute(async (c) => {
         </div>
       </section>
       <section className="px-14 my-12 font-bold">
-        <h2 className="text-3xl pb-4">Department</h2>
+        <h2 className="text-3xl pb-4 dark:text-white">Department</h2>
         <hr />
-        <p className="text-2xl py-4">{employee.department_name}</p>
+        <p className="text-2xl py-4 dark:text-white">{employee.department_name}</p>
       </section>
     </>
   )
