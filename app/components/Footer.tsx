@@ -7,7 +7,7 @@ export const Footer = () => {
           <p className="mr-4 md:mr-6">Made with ❤️ by HonoX + Cloudflare Pages + D1</p>
         </li>
         <li>
-          <a href="https://github.com/lauragift21/staff-hub" className="hover:underline mr-4 md:mr-6">GitHub</a>
+          <a href="https://github.com/lauragift21/staff-directory" className="hover:underline mr-4 md:mr-6">GitHub</a>
         </li>
       </ul>
     </footer>
